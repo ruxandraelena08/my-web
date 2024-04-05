@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    margin-right: 20px;
+}
+
+
+.hero {
+    background-image: url(https://images.unsplash.com/photo-1622405538251-e8c48fdc40db?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: -20px 0 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.nav-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    z-index: 20;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 30;
+}
+
+.nav.visible {
+    transform: translateX(0);
+}
+
+.nav-black {
+    background-color: #000;
+    width: 60%;
+    max-width: 320px;
+    min-width: 250px;
+    transition-delay: 0.5s;
+}
+
+.nav-black.visible {
+    transition-delay: 0s;
+}
+
+.nav-blue {
+    background-color: rgba(40, 67, 164, 0.546);
+    width: 85%;
+    max-width: 320px;
+    transition-delay: 0.2s;
+}
+
+.nav-blue.visible {
+    transition-delay: 0.2s;
+}
+
+.nav-white {
+    background-color: #87a4d1;
+    width: 80%;
+    max-width: 320px;
+    padding: 20px;
+    position: relative;
+    transition-delay: 0s;
+}
+
+.nav-white.visible {
+    transition-delay: 0.4s;
+}
+
+.close-btn {
+    opacity: 0.3;
+    position: absolute;
+    color: #222;
+    top: 20px;
+    right: -140px; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    margin: 20px 0;
+}
+
+.list li a {
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.list ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
